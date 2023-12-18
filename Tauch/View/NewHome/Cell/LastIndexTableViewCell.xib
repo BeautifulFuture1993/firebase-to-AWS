@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LastIndexTableViewCell" id="KGk-i7-Jjw" customClass="LastIndexTableViewCell" customModule="Tauch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9vT-m2-dgR">
+                        <rect key="frame" x="160.66666666666666" y="39" width="55" height="55"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="55" id="fFD-gJ-pmu"/>
+                            <constraint firstAttribute="width" constant="55" id="xbU-8K-iXn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以上です" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bI-ND-w0h">
+                        <rect key="frame" x="158" y="99" width="60" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="e8s-ay-azy"/>
+                            <constraint firstAttribute="height" constant="16" id="vNY-6N-B1e"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                        <color key="textColor" name="FontColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1R-Hd-QBG">
+                        <rect key="frame" x="70.000000000000014" y="119.99999999999999" width="236.33333333333337" height="26.333333333333329"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="U49-A9-Ywv"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="f10-vO-q3z"/>
+                        </constraints>
+                        <string key="text">設定中の条件のユーザーは全て表示しました。
+検索条件を広げてください！</string>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                        <color key="textColor" name="FontColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9vT-m2-dgR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="39" id="Cgg-EO-j1g"/>
+                    <constraint firstItem="0bI-ND-w0h" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="QXu-67-lJq"/>
+                    <constraint firstItem="0bI-ND-w0h" firstAttribute="top" secondItem="9vT-m2-dgR" secondAttribute="bottom" constant="5" id="fEB-8p-afQ"/>
+                    <constraint firstItem="9vT-m2-dgR" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="juC-nF-kUg"/>
+                    <constraint firstItem="d1R-Hd-QBG" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="nAN-eo-kk0"/>
+                    <constraint firstItem="d1R-Hd-QBG" firstAttribute="top" secondItem="0bI-ND-w0h" secondAttribute="bottom" constant="5" id="nae-4z-SOw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mainImage" destination="9vT-m2-dgR" id="Ojl-lP-vXa"/>
+                <outlet property="mainTitleLabel" destination="0bI-ND-w0h" id="bsH-zv-I9q"/>
+                <outlet property="subTitleLabel" destination="d1R-Hd-QBG" id="VOa-pk-HiO"/>
+            </connections>
+            <point key="canvasLocation" x="132.82442748091603" y="-4.2253521126760569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="FontColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

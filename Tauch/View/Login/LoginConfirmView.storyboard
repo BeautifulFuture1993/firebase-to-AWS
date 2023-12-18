@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Confirm View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LoginConfirmView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="LoginConfirmViewController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Drp-SZ-gUD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZf-aI-Tfa">
+                                <rect key="frame" x="20" y="265" width="374" height="34"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="コードを再送信">
+                                    <fontDescription key="titleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resendSMSCode:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7fa-nF-ivm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsK-tP-vXf">
+                                <rect key="frame" x="30" y="78" width="354" height="32"/>
+                                <string key="text">届いたメッセージに記載されている
+6桁の認証コードを入力してください</string>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※全てのコードを入力後、自動で認証を開始します。認証コードが届くまでに5秒〜10秒程度かかりますのでそのままお待ちください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcF-Ti-Nw2">
+                                <rect key="frame" x="30" y="120" width="354" height="45"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NkH-Ln-v1k" customClass="AEOTPTextField" customModule="Tauch" customModuleProvider="target">
+                                <rect key="frame" x="72" y="195" width="270" height="40"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="AjA-SQ-9Yd"/>
+                                    <constraint firstAttribute="height" constant="40" id="gpb-mA-6e6"/>
+                                </constraints>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WjA-BQ-YV4"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WjA-BQ-YV4" firstAttribute="trailing" secondItem="EZf-aI-Tfa" secondAttribute="trailing" constant="20" id="3ez-tF-zmK"/>
+                            <constraint firstItem="NkH-Ln-v1k" firstAttribute="centerX" secondItem="Drp-SZ-gUD" secondAttribute="centerX" id="7qd-iC-Ls1"/>
+                            <constraint firstItem="WjA-BQ-YV4" firstAttribute="trailing" secondItem="XcF-Ti-Nw2" secondAttribute="trailing" constant="30" id="9kH-yf-QXB"/>
+                            <constraint firstItem="XcF-Ti-Nw2" firstAttribute="leading" secondItem="WjA-BQ-YV4" secondAttribute="leading" constant="30" id="Kce-uK-sQw"/>
+                            <constraint firstItem="XcF-Ti-Nw2" firstAttribute="top" secondItem="QsK-tP-vXf" secondAttribute="bottom" constant="10" id="LKZ-Qu-b6e"/>
+                            <constraint firstItem="NkH-Ln-v1k" firstAttribute="top" secondItem="XcF-Ti-Nw2" secondAttribute="bottom" constant="30" id="P1G-Xu-l0z"/>
+                            <constraint firstItem="EZf-aI-Tfa" firstAttribute="top" secondItem="NkH-Ln-v1k" secondAttribute="bottom" constant="30" id="ZH2-eR-x6A"/>
+                            <constraint firstItem="EZf-aI-Tfa" firstAttribute="leading" secondItem="WjA-BQ-YV4" secondAttribute="leading" constant="20" id="aAF-Vb-7og"/>
+                            <constraint firstItem="WjA-BQ-YV4" firstAttribute="trailing" secondItem="QsK-tP-vXf" secondAttribute="trailing" constant="30" id="c6D-GY-Ile"/>
+                            <constraint firstItem="QsK-tP-vXf" firstAttribute="leading" secondItem="WjA-BQ-YV4" secondAttribute="leading" constant="30" id="eli-Ah-zR1"/>
+                            <constraint firstItem="QsK-tP-vXf" firstAttribute="top" secondItem="WjA-BQ-YV4" secondAttribute="top" constant="30" id="hw1-6B-KNu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="otpTextField" destination="NkH-Ln-v1k" id="4me-vb-TF6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="51.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FontColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

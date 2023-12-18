@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewMatchTableViewCell" rowHeight="116" id="KGk-i7-Jjw" customClass="NewMatchTableViewCell" customModule="Tauch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="116"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="331" height="116"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stopwatch" translatesAutoresizingMaskIntoConstraints="NO" id="kEQ-C5-F7Z">
+                        <rect key="frame" x="10" y="10" width="17" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="17" id="3f3-Nn-qRn"/>
+                            <constraint firstAttribute="height" constant="17" id="VTP-0S-qQf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マッチング後24時間以内に送ると返信率UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeK-kK-pKF">
+                        <rect key="frame" x="32" y="10" width="289" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Fli-bQ-5M0">
+                        <rect key="frame" x="5" y="37" width="321" height="79"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VLJ-MQ-S2l">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Fli-bQ-5M0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="2Dy-i2-EwG"/>
+                    <constraint firstItem="GeK-kK-pKF" firstAttribute="leading" secondItem="kEQ-C5-F7Z" secondAttribute="trailing" constant="5" id="8Db-yX-csl"/>
+                    <constraint firstAttribute="bottom" secondItem="Fli-bQ-5M0" secondAttribute="bottom" id="Dg2-7u-u6M"/>
+                    <constraint firstItem="kEQ-C5-F7Z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="F5P-nv-0fv"/>
+                    <constraint firstAttribute="trailing" secondItem="Fli-bQ-5M0" secondAttribute="trailing" constant="5" id="f9R-gg-37V"/>
+                    <constraint firstAttribute="trailing" secondItem="GeK-kK-pKF" secondAttribute="trailing" constant="10" id="gU3-Sy-89X"/>
+                    <constraint firstItem="GeK-kK-pKF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="nd9-jS-YtP"/>
+                    <constraint firstItem="kEQ-C5-F7Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qUJ-hJ-d8j"/>
+                    <constraint firstItem="Fli-bQ-5M0" firstAttribute="top" secondItem="GeK-kK-pKF" secondAttribute="bottom" constant="10" id="vwl-Ml-3fG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="newMatchCollectionView" destination="Fli-bQ-5M0" id="A36-3g-SeN"/>
+                <outlet property="newMatchTitle" destination="GeK-kK-pKF" id="wDm-X1-MC2"/>
+            </connections>
+            <point key="canvasLocation" x="58.778625954198468" y="16.901408450704228"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="stopwatch" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

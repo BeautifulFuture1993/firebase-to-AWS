@@ -1,0 +1,11 @@
+{
+    "aps":{
+        "alert":{
+           "title": "titleTest",
+           "body": "bodyTest",
+           "click_action": "https://qiita.com/koogawa/items/85c0dd0abd2f1970c5fc",
+        },
+        "sound":"default",
+        "badge":1
+    }
+}

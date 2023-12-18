@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermsWebViewController" customModule="Touch" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="jfq-Ny-Sis" id="29z-0L-bIk"/>
+                <outlet property="errorView" destination="viK-xI-rmj" id="M8z-6i-5yZ"/>
+                <outlet property="indicatorView" destination="qlK-Eb-9jC" id="7dr-Rr-70W"/>
+                <outlet property="retryButton" destination="EvR-fJ-lzn" id="zrO-7V-UVs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="oTD-9o-YyV" id="VfN-b7-2ic"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTD-9o-YyV">
+                    <rect key="frame" x="0.0" y="103" width="393" height="566"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viK-xI-rmj" userLabel="ErrorView">
+                    <rect key="frame" x="46.666666666666657" y="376" width="300" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ページを読み込めませんでした" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtB-fE-22Y">
+                            <rect key="frame" x="38.000000000000014" y="21" width="222.66666666666669" height="19.333333333333329"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="222.66999999999999" id="WIw-PP-Jvn"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvR-fJ-lzn">
+                            <rect key="frame" x="115" y="47" width="70" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="IJw-hf-3NP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="リトライ"/>
+                            <connections>
+                                <action selector="onRetryButtonTapped:" destination="-1" eventType="touchUpInside" id="sz2-58-430"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="dtB-fE-22Y" secondAttribute="trailing" constant="39.329999999999998" id="1n5-Jb-t0q"/>
+                        <constraint firstItem="dtB-fE-22Y" firstAttribute="top" secondItem="viK-xI-rmj" secondAttribute="top" constant="21" id="ERb-yU-UR2"/>
+                        <constraint firstAttribute="bottom" secondItem="EvR-fJ-lzn" secondAttribute="bottom" constant="21" id="IU6-2A-dhS"/>
+                        <constraint firstAttribute="trailing" secondItem="EvR-fJ-lzn" secondAttribute="trailing" constant="115" id="QBD-ih-Rme"/>
+                        <constraint firstAttribute="width" constant="300" id="Rp2-e6-N6f"/>
+                        <constraint firstAttribute="height" constant="100" id="VgJ-8e-YMk"/>
+                        <constraint firstItem="dtB-fE-22Y" firstAttribute="leading" secondItem="viK-xI-rmj" secondAttribute="leading" constant="38" id="fqi-rz-hWl"/>
+                        <constraint firstItem="EvR-fJ-lzn" firstAttribute="leading" secondItem="viK-xI-rmj" secondAttribute="leading" constant="115" id="uZg-Yb-dge"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qlK-Eb-9jC">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfq-Ny-Sis">
+                    <rect key="frame" x="0.0" y="669" width="393" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k18-dE-noZ">
+                            <rect key="frame" x="46" y="30" width="300" height="60"/>
+                            <color key="backgroundColor" name="defaultColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Rql-em-ccf"/>
+                                <constraint firstAttribute="width" constant="300" id="es1-Eb-mO8"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="利用規約に同意します">
+                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onAgreeButtonTapped:" destination="-1" eventType="touchUpInside" id="QLs-8x-elo"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="利用規約が新しくなりました" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iG7-p5-Fl9">
+                            <rect key="frame" x="46" y="4.6666666666666288" width="300" height="20.666666666666668"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="huV-7J-uIi"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" name="FontColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="iG7-p5-Fl9" firstAttribute="leading" secondItem="jfq-Ny-Sis" secondAttribute="leading" constant="46" id="7C3-6H-b5v"/>
+                        <constraint firstAttribute="trailing" secondItem="k18-dE-noZ" secondAttribute="trailing" constant="47" id="Egc-gY-Uic"/>
+                        <constraint firstItem="k18-dE-noZ" firstAttribute="top" secondItem="iG7-p5-Fl9" secondAttribute="bottom" constant="4.75" id="IY4-aK-gc3"/>
+                        <constraint firstAttribute="bottom" secondItem="k18-dE-noZ" secondAttribute="bottom" constant="10" id="JKv-08-U2x"/>
+                        <constraint firstItem="iG7-p5-Fl9" firstAttribute="top" secondItem="jfq-Ny-Sis" secondAttribute="top" constant="4.75" id="Spd-df-Pr8"/>
+                        <constraint firstAttribute="height" constant="100" id="ckF-eW-8A5"/>
+                        <constraint firstAttribute="trailing" secondItem="iG7-p5-Fl9" secondAttribute="trailing" constant="47" id="fhp-AF-bg3"/>
+                        <constraint firstItem="k18-dE-noZ" firstAttribute="leading" secondItem="jfq-Ny-Sis" secondAttribute="leading" constant="46" id="kgh-dE-LjQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="oTD-9o-YyV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ara-MT-f3T"/>
+                <constraint firstItem="qlK-Eb-9jC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="DcF-EP-c8C"/>
+                <constraint firstItem="jfq-Ny-Sis" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="F6N-bR-DIY"/>
+                <constraint firstItem="qlK-Eb-9jC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="G9r-26-Y9X"/>
+                <constraint firstItem="jfq-Ny-Sis" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="RGt-0X-OQ9"/>
+                <constraint firstItem="jfq-Ny-Sis" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Y8z-0t-PaG"/>
+                <constraint firstItem="oTD-9o-YyV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YM4-fm-CbS"/>
+                <constraint firstItem="oTD-9o-YyV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iQP-lG-R15"/>
+                <constraint firstItem="jfq-Ny-Sis" firstAttribute="top" secondItem="oTD-9o-YyV" secondAttribute="bottom" id="iS9-la-BgW"/>
+                <constraint firstItem="viK-xI-rmj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ptr-8y-NCi"/>
+                <constraint firstItem="viK-xI-rmj" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zqp-tj-G9l"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <point key="canvasLocation" x="139.69465648854961" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="FontColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="defaultColor">
+            <color red="1" green="0.60000002384185791" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

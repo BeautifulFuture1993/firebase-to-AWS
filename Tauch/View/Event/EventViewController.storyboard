@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nt4-mq-08t">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--イベント-->
+        <scene sceneID="pRb-H6-dhd">
+            <objects>
+                <navigationController id="Nt4-mq-08t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="イベント" image="EventTab" id="FoT-UO-xWh"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W8x-b0-1Eg">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="FontColor"/>
+                        <color key="barTintColor" name="FontColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="FontColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="FontColor"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" name="FontColor"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" name="FontColor"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IQt-E7-bbb" kind="relationship" relationship="rootViewController" id="4m0-9k-2KS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yka-PV-WEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="108.48214285714285"/>
+        </scene>
+        <!--イベント-->
+        <scene sceneID="bDE-I6-wPF">
+            <objects>
+                <tableViewController storyboardIdentifier="InvitationView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IQt-E7-bbb" customClass="EventViewController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="gaX-2V-GVZ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <inset key="separatorInset" minX="25" minY="0.0" maxX="25" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" rowHeight="140" id="ePx-F1-dWW" customClass="EventCell" customModule="Tauch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ePx-F1-dWW" id="WK0-Z1-WkK">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="140"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mYu-kv-dBQ">
+                                            <rect key="frame" x="20" y="17.666666666666671" width="105" height="105"/>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="105" id="CKK-no-f2Q"/>
+                                                <constraint firstAttribute="height" constant="105" id="L5d-zg-YF9"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYA-cW-FNS">
+                                            <rect key="frame" x="135" y="20.000000000000004" width="235" height="50.333333333333343"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" name="FontColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10時間前" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mv6-3h-9Yk">
+                                            <rect key="frame" x="135" y="104.66666666666667" width="50" height="14.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" name="FontColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RkA-dG-dAa">
+                                            <rect key="frame" x="260" y="84" width="110" height="35"/>
+                                            <color key="backgroundColor" name="AccentColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="110" id="WHX-6Q-Df6"/>
+                                                <constraint firstAttribute="height" constant="35" id="oRH-cC-AQK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                            <state key="normal" title="興味あり" image="hand.thumbsup.fill" catalog="system">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="RkA-dG-dAa" secondAttribute="trailing" constant="20" id="1Pv-RJ-2DP"/>
+                                        <constraint firstItem="RYA-cW-FNS" firstAttribute="top" secondItem="WK0-Z1-WkK" secondAttribute="top" constant="20" id="3Dx-Qf-miL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="RkA-dG-dAa" secondAttribute="bottom" constant="10" id="3Fn-bD-3xL"/>
+                                        <constraint firstItem="mYu-kv-dBQ" firstAttribute="leading" secondItem="WK0-Z1-WkK" secondAttribute="leading" constant="20" id="FGI-lN-Z6M"/>
+                                        <constraint firstItem="mYu-kv-dBQ" firstAttribute="centerY" secondItem="WK0-Z1-WkK" secondAttribute="centerY" id="Wxt-wp-PFy"/>
+                                        <constraint firstItem="RYA-cW-FNS" firstAttribute="leading" secondItem="mYu-kv-dBQ" secondAttribute="trailing" constant="10" id="cJO-Ug-pdy"/>
+                                        <constraint firstAttribute="trailing" secondItem="RYA-cW-FNS" secondAttribute="trailing" constant="20" id="llP-WS-jHL"/>
+                                        <constraint firstItem="Mv6-3h-9Yk" firstAttribute="leading" secondItem="mYu-kv-dBQ" secondAttribute="trailing" constant="10" id="rgu-hU-toa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Mv6-3h-9Yk" secondAttribute="bottom" constant="10" id="sM5-LK-q3d"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="goodButton" destination="RkA-dG-dAa" id="oAZ-dk-57k"/>
+                                    <outlet property="iconImageView" destination="mYu-kv-dBQ" id="2iJ-3e-LAA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="イベント" id="eWw-ig-3LD"/>
+                    <connections>
+                        <outlet property="eventTableView" destination="gaX-2V-GVZ" id="aUX-M6-ajK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eI5-Cy-BjR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775.38461538461536" y="107.34597156398104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="EventTab" width="24" height="24"/>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FontColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

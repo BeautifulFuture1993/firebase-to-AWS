@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Talk Guide Display Ranking View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TalkGuideDisplayRankingView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="TalkGuideDisplayRankingViewController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBh-bl-g0P">
+                                <rect key="frame" x="16" y="148" width="361" height="556"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nmF-Sw-wME">
+                                        <rect key="frame" x="15" y="15.000000000000004" width="25" height="25.000000000000011"/>
+                                        <color key="tintColor" red="1" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="k43-eE-TPG"/>
+                                            <constraint firstAttribute="width" constant="25" id="mC4-2T-Zh7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おはなしガイド" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGM-0T-ABE">
+                                        <rect key="frame" x="48" y="20" width="86" height="14.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="1" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0R-ld-aeo">
+                                        <rect key="frame" x="35.666666666666657" y="57" width="290" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="cgx-Bc-jSI"/>
+                                        </constraints>
+                                        <string key="text">アプリ内であなたが表示され
+にくくなるかもしれません</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserDownImage" translatesAutoresizingMaskIntoConstraints="NO" id="2Lc-LM-2Bh">
+                                        <rect key="frame" x="60" y="130" width="241" height="297"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="241" id="GVb-es-Knx"/>
+                                            <constraint firstAttribute="height" constant="297" id="jFd-2Y-oue"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8g-WB-Dwa">
+                                        <rect key="frame" x="22.666666666666657" y="447" width="316" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="316" id="8wu-At-vNn"/>
+                                            <constraint firstAttribute="height" constant="90" id="QDU-rn-4nA"/>
+                                        </constraints>
+                                        <string key="text">あなたから「いいね！」を送った相手にメッセージを送っていません。
+この行為が重なりますと、アプリ内で表示されにくくなります。友達になりたい方には「メッセージ」を送りましょう。</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mt-Sl-D1Z">
+                                        <rect key="frame" x="308.66666666666669" y="9.6666666666666572" width="47.333333333333314" height="35"/>
+                                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="close:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h4B-xM-3l5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.92941176469999998" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="eGM-0T-ABE" firstAttribute="leading" secondItem="nmF-Sw-wME" secondAttribute="trailing" constant="8" id="2Ku-4F-SRD"/>
+                                    <constraint firstItem="nmF-Sw-wME" firstAttribute="leading" secondItem="lBh-bl-g0P" secondAttribute="leading" constant="15" id="2Ve-u2-Gjv"/>
+                                    <constraint firstAttribute="width" constant="361" id="Bp1-JT-i9c"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Mt-Sl-D1Z" secondAttribute="trailing" constant="5" id="DYu-vx-GSA"/>
+                                    <constraint firstItem="nmF-Sw-wME" firstAttribute="top" secondItem="lBh-bl-g0P" secondAttribute="top" constant="13.33" id="Nhy-pv-zR5"/>
+                                    <constraint firstItem="O8g-WB-Dwa" firstAttribute="top" secondItem="2Lc-LM-2Bh" secondAttribute="bottom" constant="20" id="PE1-k0-8Bd"/>
+                                    <constraint firstAttribute="bottom" secondItem="O8g-WB-Dwa" secondAttribute="bottom" constant="19" id="Q1b-l8-WmE"/>
+                                    <constraint firstItem="2Lc-LM-2Bh" firstAttribute="centerX" secondItem="lBh-bl-g0P" secondAttribute="centerX" id="SKW-lJ-xFS"/>
+                                    <constraint firstItem="2Lc-LM-2Bh" firstAttribute="top" secondItem="g0R-ld-aeo" secondAttribute="bottom" constant="20" id="Ubq-dV-dx7"/>
+                                    <constraint firstItem="4Mt-Sl-D1Z" firstAttribute="centerY" secondItem="eGM-0T-ABE" secondAttribute="centerY" id="XRH-bY-cNi"/>
+                                    <constraint firstItem="eGM-0T-ABE" firstAttribute="top" secondItem="lBh-bl-g0P" secondAttribute="top" constant="20" id="ro2-0n-4px"/>
+                                    <constraint firstAttribute="height" constant="556" id="thl-3W-A1k"/>
+                                    <constraint firstItem="g0R-ld-aeo" firstAttribute="centerX" secondItem="lBh-bl-g0P" secondAttribute="centerX" id="yKi-rb-Qip"/>
+                                    <constraint firstItem="O8g-WB-Dwa" firstAttribute="centerX" secondItem="lBh-bl-g0P" secondAttribute="centerX" id="ykb-6g-P5b"/>
+                                    <constraint firstItem="g0R-ld-aeo" firstAttribute="top" secondItem="nmF-Sw-wME" secondAttribute="bottom" constant="15.67" id="zQu-70-5vQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="lBh-bl-g0P" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="WnM-qq-nbg"/>
+                            <constraint firstItem="lBh-bl-g0P" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="vCS-6K-IaK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayAdviceLabel" destination="O8g-WB-Dwa" id="E51-e6-6ru"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="UserDownImage" width="266.66665649414062" height="331.66665649414062"/>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

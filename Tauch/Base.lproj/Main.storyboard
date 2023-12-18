@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e3B-9I-Rw1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DNs-Oa-a7R"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ee1-uZ-h3h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cDA-XJ-2R1">
+                                <rect key="frame" x="82" y="192" width="250" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="gmg-un-6B7"/>
+                                    <constraint firstAttribute="height" constant="100" id="u2H-87-cVO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1i-Gg-ijV">
+                                <rect key="frame" x="20" y="818" width="374" height="34"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="お困りの方">
+                                    <fontDescription key="titleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showContactForm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wT8-W8-NJ9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKa-ct-qET">
+                                <rect key="frame" x="20" y="578" width="374" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uOt-Hu-lko"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="phone.fill" catalog="system" title="電話番号でログイン" imagePadding="10" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcb-Z6-7nd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMW-AJ-DPn">
+                                <rect key="frame" x="20" y="698" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.21960784310000001" green="0.3411764706" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="P89-K6-9U5"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="FacebookLogo" title="Facebookでログイン" imagePadding="10" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="facebookAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0pc-gZ-kap"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0R-LU-Cze">
+                                <rect key="frame" x="20" y="758" width="374" height="50"/>
+                                <color key="backgroundColor" name="FontColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nMS-Hz-ssj"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="AppleLogo" title="Appleでログイン" imagePadding="10" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1a-m9-LnP">
+                                <rect key="frame" x="20" y="638" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Lyl-hA-wgn"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GoogleLogo" title="Googleでログイン" imagePadding="10" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="googleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZSN-ao-PA4"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNC-Nf-xYX">
+                                <rect key="frame" x="20" y="478" width="374" height="90"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Akk-k2-mLB"/>
+                                </constraints>
+                                <string key="text">アカウントを作成するか、ログインすると、あなたはTouchの利用規約・プライバシーポリシーに同意することになります。
+※ アカウント作成するためにも、まずログインが必要になります。</string>
+                                <color key="textColor" name="FontColor"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H1a-m9-LnP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2XI-wP-etV"/>
+                            <constraint firstItem="cDA-XJ-2R1" firstAttribute="top" secondItem="DNs-Oa-a7R" secondAttribute="bottom" constant="100" id="3VG-Nl-1gf"/>
+                            <constraint firstItem="j1i-Gg-ijV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4dj-Yu-jEK"/>
+                            <constraint firstItem="CNC-Nf-xYX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7mO-eQ-rrb"/>
+                            <constraint firstItem="C0R-LU-Cze" firstAttribute="top" secondItem="dMW-AJ-DPn" secondAttribute="bottom" constant="10" id="A2T-Iy-lpV"/>
+                            <constraint firstItem="dMW-AJ-DPn" firstAttribute="trailing" secondItem="C0R-LU-Cze" secondAttribute="trailing" id="FHM-Lv-nXd"/>
+                            <constraint firstItem="cDA-XJ-2R1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FSM-0c-ZoZ"/>
+                            <constraint firstItem="H1a-m9-LnP" firstAttribute="top" secondItem="HKa-ct-qET" secondAttribute="bottom" constant="10" id="Lud-tj-6O4"/>
+                            <constraint firstItem="j1i-Gg-ijV" firstAttribute="top" secondItem="C0R-LU-Cze" secondAttribute="bottom" constant="10" id="SJA-ae-Zfd"/>
+                            <constraint firstItem="HKa-ct-qET" firstAttribute="top" secondItem="CNC-Nf-xYX" secondAttribute="bottom" constant="10" id="XFa-h1-KQH"/>
+                            <constraint firstItem="C0R-LU-Cze" firstAttribute="leading" secondItem="dMW-AJ-DPn" secondAttribute="leading" id="bRx-8P-IR3"/>
+                            <constraint firstItem="Ee1-uZ-h3h" firstAttribute="top" secondItem="j1i-Gg-ijV" secondAttribute="bottom" constant="10" id="bjs-we-Ihx"/>
+                            <constraint firstItem="H1a-m9-LnP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cq2-hh-SeB"/>
+                            <constraint firstItem="dMW-AJ-DPn" firstAttribute="top" secondItem="H1a-m9-LnP" secondAttribute="bottom" constant="10" id="d80-pS-C7J"/>
+                            <constraint firstItem="HKa-ct-qET" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ewV-fh-qUJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HKa-ct-qET" secondAttribute="trailing" id="gbd-0y-PER"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CNC-Nf-xYX" secondAttribute="trailing" id="hq1-1O-R2T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j1i-Gg-ijV" secondAttribute="trailing" id="kQL-Rc-gZR"/>
+                            <constraint firstItem="dMW-AJ-DPn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nNt-3z-3xS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dMW-AJ-DPn" secondAttribute="trailing" id="no6-g6-VtE"/>
+                            <constraint firstItem="H1a-m9-LnP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sCX-bP-a9K"/>
+                            <constraint firstItem="H1a-m9-LnP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vAb-bY-eG8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XQF-Gd-pkC"/>
+                    <connections>
+                        <outlet property="appleBtn" destination="C0R-LU-Cze" id="pZe-tP-hs8"/>
+                        <outlet property="contactBtn" destination="j1i-Gg-ijV" id="yHD-3J-mhZ"/>
+                        <outlet property="facebookBtn" destination="dMW-AJ-DPn" id="mAb-Kx-jQl"/>
+                        <outlet property="googleBtn" destination="H1a-m9-LnP" id="pHK-92-5ZO"/>
+                        <outlet property="loginBtn" destination="HKa-ct-qET" id="Hn4-wz-XrN"/>
+                        <outlet property="precautionView" destination="CNC-Nf-xYX" id="GJr-dO-goN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="84"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ayY-aQ-7KZ">
+            <objects>
+                <navigationController id="e3B-9I-Rw1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="syc-th-9jl">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="FontColor"/>
+                        <color key="barTintColor" name="FontColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="FontColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="FontColor"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" name="FontColor"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" name="FontColor"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rU8-mj-bbr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LiC-4L-cnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-849" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppLogo" width="1059" height="320"/>
+        <image name="AppleLogo" width="18" height="20"/>
+        <image name="FacebookLogo" width="12" height="20"/>
+        <image name="GoogleLogo" width="20" height="20"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FontColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

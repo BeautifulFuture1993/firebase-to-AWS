@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Visitor Popup View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="VisitorPopupView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="VisitorPopupViewController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R3O-cI-DSB"/>
+                        <viewControllerLayoutGuide type="bottom" id="gy2-ec-v5B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyL-fu-386">
+                                <rect key="frame" x="320" y="236" width="40" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="R8b-xT-lc2"/>
+                                    <constraint firstAttribute="width" constant="40" id="fwa-j5-87h"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KX8-Jw-LAs"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitor_popup" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-qA-Tjc">
+                                <rect key="frame" x="41.666666666666657" y="271" width="310" height="310"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="m9D-LT-2uf"/>
+                                    <constraint firstAttribute="height" constant="310" id="yfp-zl-X33"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VyL-fu-386" secondAttribute="trailing" constant="33" id="9sa-d6-gyO"/>
+                            <constraint firstItem="nBT-qA-Tjc" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="QLg-Cv-7JJ"/>
+                            <constraint firstItem="nBT-qA-Tjc" firstAttribute="top" secondItem="VyL-fu-386" secondAttribute="bottom" id="UER-PC-JRS"/>
+                            <constraint firstItem="nBT-qA-Tjc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xWl-7j-vOU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="VyL-fu-386" id="qS6-VO-yaR"/>
+                        <outlet property="popupImageView" destination="nBT-qA-Tjc" id="0Om-gd-7aW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="visitor_popup" width="1038" height="1038.3333740234375"/>
+    </resources>
+</document>

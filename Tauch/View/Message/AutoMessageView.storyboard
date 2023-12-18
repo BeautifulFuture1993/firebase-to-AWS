@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auto Message View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AutoMessageView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AutoMessageViewController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c20-P3-cHF">
+                                <rect key="frame" x="0.0" y="59" width="388" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自動メッセージ送信機能のONとOFFについて" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epv-2J-vDP">
+                                        <rect key="frame" x="20" y="19" width="348" height="19.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" name="FontColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マッチング後の1通目が自動的に送られる事により、”友達作り”までの加速を促す効果がございます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYS-Do-m5t">
+                                        <rect key="frame" x="20" y="68.333333333333329" width="348" height="59.999999999999986"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="dnt-D2-Me7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" name="FontColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="もし、1通目は自分で作成した文章を送りたい場合は以下の設定ボタンより「OFF」の選択をお願い致します。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhR-bl-jZT">
+                                        <rect key="frame" x="20" y="128.33333333333334" width="348" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="J4L-VT-YV1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" name="FontColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBR-BN-tGr">
+                                        <rect key="frame" x="34" y="218.33333333333331" width="320" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="E12-mP-KU0"/>
+                                            <constraint firstAttribute="height" constant="50" id="VeX-eS-MXC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="今後、自動メッセージ送信が不要な場合">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                            <color key="baseForegroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="autoMessageSettingButtonTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bxv-vp-TRA"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※下記の手順でも自動メッセージを止める事ができます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTh-5i-Hny">
+                                        <rect key="frame" x="20" y="298.33333333333331" width="348" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="DHU-0s-7cB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KLX-SL-dTZ">
+                                        <rect key="frame" x="28" y="348.33333333333331" width="330" height="103"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LhP-Fd-XAA">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="17"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BV8-L0-1RY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="13" height="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="17" id="h4k-8U-0yi"/>
+                                                            <constraint firstAttribute="width" constant="13" id="vtY-2j-uYa"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定画面にある「アカウント設定」を選択" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4a-66-YQH">
+                                                        <rect key="frame" x="21" y="0.0" width="309" height="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="309" id="QzF-sg-uay"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XK2-7N-f7A">
+                                                <rect key="frame" x="0.0" y="25" width="330" height="35"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFw-DV-OE4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="13" height="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="13" id="DBE-iP-Lle"/>
+                                                            <constraint firstAttribute="height" constant="17" id="DXC-9G-bbs"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「アカウント設定」から「マッチ後の自動メッセージ設定」を選択" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZH-tI-ccv">
+                                                        <rect key="frame" x="21" y="0.0" width="309" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="b7k-oF-GDX"/>
+                                                            <constraint firstAttribute="width" constant="309" id="gbM-hU-cld"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5hm-x3-4af">
+                                                <rect key="frame" x="0.0" y="68" width="330" height="35"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69n-GE-zRh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="13" height="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="17" id="847-Ub-5Hd"/>
+                                                            <constraint firstAttribute="width" constant="13" id="kW2-HV-Ssz"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「オレンジ色のボタン」をタップして灰色にする" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTu-oh-CsC">
+                                                        <rect key="frame" x="21" y="0.0" width="309" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="3Lj-0g-92o"/>
+                                                            <constraint firstAttribute="width" constant="309" id="haI-gr-sem"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="bTh-5i-Hny" firstAttribute="leading" secondItem="c20-P3-cHF" secondAttribute="leading" constant="20" id="3Hv-aa-5hM"/>
+                                    <constraint firstItem="WBR-BN-tGr" firstAttribute="top" secondItem="WhR-bl-jZT" secondAttribute="bottom" constant="30" id="6Pu-Yx-0e6"/>
+                                    <constraint firstItem="epv-2J-vDP" firstAttribute="leading" secondItem="c20-P3-cHF" secondAttribute="leading" constant="20" id="B19-nO-uVk"/>
+                                    <constraint firstItem="KLX-SL-dTZ" firstAttribute="top" secondItem="bTh-5i-Hny" secondAttribute="bottom" constant="10" id="CVF-wo-UCC"/>
+                                    <constraint firstItem="bTh-5i-Hny" firstAttribute="top" secondItem="WBR-BN-tGr" secondAttribute="bottom" constant="30" id="FaC-0P-MdJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="WhR-bl-jZT" secondAttribute="trailing" constant="20" id="GdZ-qk-Hdu"/>
+                                    <constraint firstAttribute="trailing" secondItem="epv-2J-vDP" secondAttribute="trailing" constant="20" id="OKT-3r-v2S"/>
+                                    <constraint firstItem="WhR-bl-jZT" firstAttribute="leading" secondItem="c20-P3-cHF" secondAttribute="leading" constant="20" id="QaD-5N-s5q"/>
+                                    <constraint firstItem="WhR-bl-jZT" firstAttribute="top" secondItem="sYS-Do-m5t" secondAttribute="bottom" id="Ssy-nU-m7P"/>
+                                    <constraint firstAttribute="trailing" secondItem="KLX-SL-dTZ" secondAttribute="trailing" constant="30" id="XKf-of-8V3"/>
+                                    <constraint firstItem="sYS-Do-m5t" firstAttribute="top" secondItem="epv-2J-vDP" secondAttribute="bottom" constant="30" id="Y7s-Ar-cV3"/>
+                                    <constraint firstAttribute="trailing" secondItem="sYS-Do-m5t" secondAttribute="trailing" constant="20" id="bAj-3i-qb1"/>
+                                    <constraint firstItem="KLX-SL-dTZ" firstAttribute="leading" secondItem="c20-P3-cHF" secondAttribute="leading" constant="28" id="gfW-p7-KiA"/>
+                                    <constraint firstItem="sYS-Do-m5t" firstAttribute="leading" secondItem="c20-P3-cHF" secondAttribute="leading" constant="20" id="o1G-w8-5BC"/>
+                                    <constraint firstItem="WBR-BN-tGr" firstAttribute="centerX" secondItem="c20-P3-cHF" secondAttribute="centerX" id="sKL-9n-ACH"/>
+                                    <constraint firstAttribute="trailing" secondItem="bTh-5i-Hny" secondAttribute="trailing" constant="20" id="t4s-1k-2aU"/>
+                                    <constraint firstItem="epv-2J-vDP" firstAttribute="top" secondItem="c20-P3-cHF" secondAttribute="top" constant="19" id="v1W-q6-iyi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c20-P3-cHF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Fhf-7V-A6d"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="c20-P3-cHF" secondAttribute="bottom" id="MJd-lB-1Zo"/>
+                            <constraint firstItem="c20-P3-cHF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="onG-xX-q7F"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c20-P3-cHF" secondAttribute="trailing" id="s7i-hz-bQ1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="autoMessageStopBtn" destination="WBR-BN-tGr" id="Hve-BD-Kbb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.832061068702288" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="FontColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

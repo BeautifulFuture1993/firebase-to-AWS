@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--電話番号を入力-->
+        <scene sceneID="Y92-JM-eDp">
+            <objects>
+                <viewController storyboardIdentifier="LoginView" id="SBN-66-8Y3" customClass="LoginViewController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fzW-uY-mJc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MaZ-lI-h9W">
+                                <rect key="frame" x="20" y="90" width="374" height="50"/>
+                                <color key="backgroundColor" name="LightColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hzN-ko-JMr"/>
+                                </constraints>
+                                <color key="textColor" name="FontColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Eu-9Q-aJT">
+                                <rect key="frame" x="20" y="160" width="374" height="70"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="8u7-wU-PnR"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SMSを送信">
+                                    <fontDescription key="titleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="callSMSAuth:" destination="SBN-66-8Y3" eventType="touchUpInside" id="Dlr-TJ-cr9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電話番号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQc-7r-Y9N">
+                                <rect key="frame" x="30" y="64" width="64" height="16"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bmb-wF-uQw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Eu-9Q-aJT" firstAttribute="top" secondItem="MaZ-lI-h9W" secondAttribute="bottom" constant="20" id="9Oo-Gd-c2v"/>
+                            <constraint firstItem="bmb-wF-uQw" firstAttribute="trailing" secondItem="MaZ-lI-h9W" secondAttribute="trailing" constant="20" id="Asr-Sx-BRL"/>
+                            <constraint firstItem="MaZ-lI-h9W" firstAttribute="leading" secondItem="bmb-wF-uQw" secondAttribute="leading" constant="20" id="MpR-5n-UAY"/>
+                            <constraint firstItem="MaZ-lI-h9W" firstAttribute="top" secondItem="xQc-7r-Y9N" secondAttribute="bottom" constant="10" id="VjJ-wt-EHM"/>
+                            <constraint firstItem="bmb-wF-uQw" firstAttribute="trailing" secondItem="8Eu-9Q-aJT" secondAttribute="trailing" constant="20" id="X53-0N-K7f"/>
+                            <constraint firstItem="xQc-7r-Y9N" firstAttribute="leading" secondItem="bmb-wF-uQw" secondAttribute="leading" constant="30" id="gGt-sq-ANd"/>
+                            <constraint firstItem="xQc-7r-Y9N" firstAttribute="top" secondItem="bmb-wF-uQw" secondAttribute="top" constant="20" id="nHV-Xw-Nhd"/>
+                            <constraint firstItem="8Eu-9Q-aJT" firstAttribute="leading" secondItem="bmb-wF-uQw" secondAttribute="leading" constant="20" id="nIm-z4-vqq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="電話番号を入力" id="q1I-Qp-4nH"/>
+                    <connections>
+                        <outlet property="inputTelField" destination="MaZ-lI-h9W" id="pz5-tp-4Yt"/>
+                        <outlet property="sendButton" destination="8Eu-9Q-aJT" id="cj6-Nr-J30"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsf-Hu-3QD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="FontColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightColor">
+            <color red="1" green="0.8784313725490196" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

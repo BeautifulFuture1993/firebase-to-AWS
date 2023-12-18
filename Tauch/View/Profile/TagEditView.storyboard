@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--タグを編集-->
+        <scene sceneID="nyp-hM-SuF">
+            <objects>
+                <viewController storyboardIdentifier="TagEditView" id="03H-ro-84W" customClass="TagEditViewController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RRR-8P-R5z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="no0-K3-3vy">
+                                <rect key="frame" x="20" y="762" width="374" height="70"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="7hE-0F-eTT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="変更する">
+                                    <fontDescription key="titleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="changeAction:" destination="03H-ro-84W" eventType="touchUpInside" id="mGE-V4-fIQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="趣味や好きなことを3つ以上選択してください。同じものを選択したユーザーが優先表示されます。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ish-Zm-ya2">
+                                <rect key="frame" x="20" y="58" width="374" height="32"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="M0h-bE-GIy">
+                                <rect key="frame" x="20" y="100" width="374" height="642"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wj9-SJ-6kY">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Wj9-SJ-6kY" secondAttribute="trailing" id="I7c-I9-wmf"/>
+                                    <constraint firstItem="Wj9-SJ-6kY" firstAttribute="width" secondItem="M0h-bE-GIy" secondAttribute="width" id="Kip-fO-RrN"/>
+                                    <constraint firstItem="Wj9-SJ-6kY" firstAttribute="top" secondItem="M0h-bE-GIy" secondAttribute="top" id="ala-3C-kLc"/>
+                                    <constraint firstItem="Wj9-SJ-6kY" firstAttribute="leading" secondItem="M0h-bE-GIy" secondAttribute="leading" id="dVe-kg-3by"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wj9-SJ-6kY" secondAttribute="bottom" id="suQ-9O-1EH"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9PY-f2-DWl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9PY-f2-DWl" firstAttribute="bottom" secondItem="no0-K3-3vy" secondAttribute="bottom" constant="30" id="2d3-9w-l1W"/>
+                            <constraint firstItem="M0h-bE-GIy" firstAttribute="leading" secondItem="9PY-f2-DWl" secondAttribute="leading" constant="20" id="SJw-eP-QAO"/>
+                            <constraint firstItem="M0h-bE-GIy" firstAttribute="top" secondItem="Ish-Zm-ya2" secondAttribute="bottom" constant="10" id="Z8t-sX-ijd"/>
+                            <constraint firstItem="no0-K3-3vy" firstAttribute="leading" secondItem="9PY-f2-DWl" secondAttribute="leading" constant="20" id="ZFV-KR-JFB"/>
+                            <constraint firstItem="no0-K3-3vy" firstAttribute="top" secondItem="M0h-bE-GIy" secondAttribute="bottom" constant="20" id="iC4-O4-A92"/>
+                            <constraint firstItem="Ish-Zm-ya2" firstAttribute="leading" secondItem="9PY-f2-DWl" secondAttribute="leading" constant="20" id="kd9-ls-ecs"/>
+                            <constraint firstItem="9PY-f2-DWl" firstAttribute="trailing" secondItem="Ish-Zm-ya2" secondAttribute="trailing" constant="20" id="oKq-fY-YNE"/>
+                            <constraint firstItem="Ish-Zm-ya2" firstAttribute="top" secondItem="9PY-f2-DWl" secondAttribute="top" constant="10" id="y0D-ZZ-0nq"/>
+                            <constraint firstItem="9PY-f2-DWl" firstAttribute="trailing" secondItem="M0h-bE-GIy" secondAttribute="trailing" constant="20" id="yiS-qu-Rs9"/>
+                            <constraint firstItem="9PY-f2-DWl" firstAttribute="trailing" secondItem="no0-K3-3vy" secondAttribute="trailing" constant="20" id="yjX-JQ-JgH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="タグを編集" id="e9k-qq-Xzy"/>
+                    <connections>
+                        <outlet property="changeButton" destination="no0-K3-3vy" id="bTt-Py-RSU"/>
+                        <outlet property="scrollContainerStackView" destination="Wj9-SJ-6kY" id="10x-R1-YHI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9W4-K0-aVD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3700.0000000000005" y="758.70535714285711"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="tintColor"/>
+    <resources>
+        <namedColor name="FontColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

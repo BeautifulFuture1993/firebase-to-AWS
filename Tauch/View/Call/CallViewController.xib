@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CallViewController" customModule="Tauch" customModuleProvider="target">
+            <connections>
+                <outlet property="callWaitView" destination="bsw-8K-Zbd" id="pDn-wr-fuJ"/>
+                <outlet property="callWaitViewLabel" destination="Abo-4G-gTS" id="FIk-xr-5Ma"/>
+                <outlet property="closeCallWaitViewButton" destination="wp7-6x-SxM" id="e2j-yF-wVy"/>
+                <outlet property="endCallButton" destination="Ef9-2y-iPr" id="K1I-l3-HBx"/>
+                <outlet property="iconImageView" destination="Yk6-bZ-6eA" id="Syn-Ms-Fqd"/>
+                <outlet property="joinButton" destination="aDM-LP-Ec8" id="gSe-T6-fp7"/>
+                <outlet property="micButton" destination="jWj-tG-FAM" id="iZ7-S2-Tgw"/>
+                <outlet property="micLabel" destination="1k3-RG-QRN" id="vJT-5w-nl9"/>
+                <outlet property="partnerUserName" destination="FJd-fY-4yd" id="vW9-zs-aGZ"/>
+                <outlet property="pertnerIconImageViewForWaitView" destination="XoI-aN-l97" id="TdU-WY-kPZ"/>
+                <outlet property="speakerButton" destination="0Id-oK-nP1" id="9H8-QZ-cqI"/>
+                <outlet property="speakerLabel" destination="5V6-AQ-w6Z" id="db9-ep-jjO"/>
+                <outlet property="timeLabel" destination="8A3-9e-X0i" id="h34-S9-3bP"/>
+                <outlet property="view" destination="baQ-F1-e9z" id="Kk4-A6-thC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="baQ-F1-e9z">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" id="Yk6-bZ-6eA">
+                    <rect key="frame" x="113" y="100" width="150" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                    <color key="backgroundColor" systemColor="systemGray3Color"/>
+                    <color key="tintColor" systemColor="systemGray6Color"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="75"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJd-fY-4yd">
+                    <rect key="frame" x="37.5" y="261.5" width="300" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1UF-Ve-g76"/>
+                        <constraint firstAttribute="width" constant="300" id="adA-R7-ceb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8A3-9e-X0i">
+                    <rect key="frame" x="87.5" y="294.5" width="200" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="NUf-Pe-t1Z"/>
+                        <constraint firstAttribute="width" constant="200" id="t7z-MW-7d1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" systemColor="systemGray6Color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Id-oK-nP1">
+                    <rect key="frame" x="259" y="548" width="100" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="2hu-ZU-GgZ"/>
+                        <constraint firstAttribute="height" constant="60" id="gxx-rI-LxD"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="speaker.1.fill" catalog="system"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="speakerButtonTapped:" destination="-1" eventType="touchUpInside" id="j7P-LE-xCp"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="スピーカーをオン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5V6-AQ-w6Z">
+                    <rect key="frame" x="259" y="596" width="100" height="22"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="aGN-QA-2Fm"/>
+                        <constraint firstAttribute="width" constant="100" id="ojA-8g-O6T"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef9-2y-iPr">
+                    <rect key="frame" x="157.5" y="558" width="60" height="60"/>
+                    <color key="backgroundColor" red="0.93333333330000001" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="IT8-BH-b0K"/>
+                        <constraint firstAttribute="width" constant="60" id="iKB-8R-9Pc"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="phone.down.fill" catalog="system">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onEndCallButtonTapped:" destination="-1" eventType="touchUpInside" id="5wt-PO-KOw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWj-tG-FAM">
+                    <rect key="frame" x="16" y="548" width="100" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="CX7-VC-fal"/>
+                        <constraint firstAttribute="width" constant="100" id="wtp-l0-peu"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="mic.fill" catalog="system"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onMicButtonTapped:" destination="-1" eventType="touchUpInside" id="Kpe-5q-YV8"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="マイクをオフ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1k3-RG-QRN">
+                    <rect key="frame" x="16" y="596" width="100" height="22"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="oNQ-el-cPj"/>
+                        <constraint firstAttribute="width" constant="100" id="tOK-gV-gAE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsw-8K-Zbd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-4G-gTS">
+                            <rect key="frame" x="37.5" y="337.5" width="300" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="KBW-Sb-QbD"/>
+                                <constraint firstAttribute="width" constant="300" id="YIJ-sD-xQA"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="〇〇〇〇〇〇〇〇〇〇さんと">
+                                    <attributes>
+                                        <font key="NSFont" size="20" name="HiraginoSans-W3"/>
+                                        <font key="NSOriginalFont" size="20" name="LiGothicMed"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="通話">
+                                    <attributes>
+                                        <font key="NSFont" size="20" name="LiGothicMed"/>
+                                        <font key="NSOriginalFont" size="20" name="ArimaKoshi-Medium"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="しますか">
+                                    <attributes>
+                                        <font key="NSFont" size="20" name="HiraginoSans-W3"/>
+                                        <font key="NSOriginalFont" size="20" name="LiGothicMed"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="？">
+                                    <attributes>
+                                        <font key="NSFont" size="20" name="LiGothicMed"/>
+                                        <font key="NSOriginalFont" size="20" name="ArimaKoshi-Medium"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp7-6x-SxM">
+                            <rect key="frame" x="50" y="568" width="50" height="50"/>
+                            <color key="backgroundColor" red="0.93333333330000001" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="k50-bx-pO6"/>
+                                <constraint firstAttribute="height" constant="50" id="tRS-o8-AV6"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onCloseCallWaitViewButtonTapped:" destination="-1" eventType="touchUpInside" id="AqW-Na-PBL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDM-LP-Ec8">
+                            <rect key="frame" x="125" y="568" width="200" height="50"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="fu1-vG-APm"/>
+                            </constraints>
+                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="ボイスルームに参加">
+                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onjoinButtonTapped:" destination="-1" eventType="touchUpInside" id="cn6-fP-Ozw"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" id="XoI-aN-l97">
+                            <rect key="frame" x="142" y="238" width="90" height="90"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                            <color key="backgroundColor" systemColor="systemGray3Color"/>
+                            <color key="tintColor" systemColor="systemGray6Color"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="45"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3y-yq-rPH">
+                            <rect key="frame" x="37.5" y="390.5" width="300" height="40"/>
+                            <color key="tintColor" name="label"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="CVp-L6-Cjv"/>
+                                <constraint firstAttribute="width" constant="300" id="zQn-hP-2r6"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="通話の約束はしていますか？">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="16" name=".HiraKakuInterface-W3"/>
+                                        <font key="NSOriginalFont" metaFont="system" size="16"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content=" ">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="system" size="16"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="ボイスルームに参加して待ちましょう。">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="16" name=".HiraKakuInterface-W3"/>
+                                        <font key="NSOriginalFont" metaFont="system" size="16"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="kJV-94-2cN"/>
+                    <color key="backgroundColor" systemColor="systemGrayColor"/>
+                    <constraints>
+                        <constraint firstItem="W3y-yq-rPH" firstAttribute="centerX" secondItem="bsw-8K-Zbd" secondAttribute="centerX" id="A8J-B1-u3W"/>
+                        <constraint firstItem="kJV-94-2cN" firstAttribute="bottom" secondItem="aDM-LP-Ec8" secondAttribute="bottom" constant="49" id="HNh-hU-lzy"/>
+                        <constraint firstItem="Abo-4G-gTS" firstAttribute="centerX" secondItem="bsw-8K-Zbd" secondAttribute="centerX" id="S7N-AY-0CV"/>
+                        <constraint firstItem="kJV-94-2cN" firstAttribute="trailing" secondItem="aDM-LP-Ec8" secondAttribute="trailing" constant="50" id="bEs-2E-PWd"/>
+                        <constraint firstItem="aDM-LP-Ec8" firstAttribute="leading" secondItem="wp7-6x-SxM" secondAttribute="trailing" constant="25" id="bKK-WU-0L0"/>
+                        <constraint firstItem="W3y-yq-rPH" firstAttribute="top" secondItem="Abo-4G-gTS" secondAttribute="bottom" constant="3" id="mf7-Gn-PAq"/>
+                        <constraint firstItem="Abo-4G-gTS" firstAttribute="top" secondItem="XoI-aN-l97" secondAttribute="bottom" constant="8" id="qiM-zB-Oug"/>
+                        <constraint firstItem="wp7-6x-SxM" firstAttribute="leading" secondItem="kJV-94-2cN" secondAttribute="leading" constant="50" id="qzT-vB-7pu"/>
+                        <constraint firstItem="kJV-94-2cN" firstAttribute="bottom" secondItem="wp7-6x-SxM" secondAttribute="bottom" constant="49" id="yqE-2B-iMT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vZg-Du-dim"/>
+            <color key="backgroundColor" systemColor="systemGrayColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5V6-AQ-w6Z" secondAttribute="trailing" constant="16" id="0VV-jb-0jZ"/>
+                <constraint firstItem="vZg-Du-dim" firstAttribute="bottom" secondItem="0Id-oK-nP1" secondAttribute="bottom" constant="59" id="44p-Pz-JIR"/>
+                <constraint firstItem="FJd-fY-4yd" firstAttribute="centerX" secondItem="baQ-F1-e9z" secondAttribute="centerX" id="527-Vh-u98"/>
+                <constraint firstItem="vZg-Du-dim" firstAttribute="bottom" secondItem="Ef9-2y-iPr" secondAttribute="bottom" constant="49" id="9QU-kY-tFM"/>
+                <constraint firstItem="vZg-Du-dim" firstAttribute="bottom" secondItem="jWj-tG-FAM" secondAttribute="bottom" constant="59" id="9Va-qG-nio"/>
+                <constraint firstItem="8A3-9e-X0i" firstAttribute="centerX" secondItem="baQ-F1-e9z" secondAttribute="centerX" id="AjH-vL-vvw"/>
+                <constraint firstItem="jWj-tG-FAM" firstAttribute="leading" secondItem="baQ-F1-e9z" secondAttribute="leading" constant="16" id="CkX-Pk-Xkc"/>
+                <constraint firstItem="8A3-9e-X0i" firstAttribute="top" secondItem="FJd-fY-4yd" secondAttribute="bottom" constant="3" id="H32-kE-CfP"/>
+                <constraint firstItem="Ef9-2y-iPr" firstAttribute="centerX" secondItem="baQ-F1-e9z" secondAttribute="centerX" id="KJ3-2Q-ed5"/>
+                <constraint firstItem="vZg-Du-dim" firstAttribute="bottom" secondItem="1k3-RG-QRN" secondAttribute="bottom" constant="49" id="Mye-6e-SSk"/>
+                <constraint firstItem="bsw-8K-Zbd" firstAttribute="trailing" secondItem="vZg-Du-dim" secondAttribute="trailing" id="QVX-Du-35K"/>
+                <constraint firstItem="FJd-fY-4yd" firstAttribute="top" secondItem="Yk6-bZ-6eA" secondAttribute="bottom" constant="10" id="VYI-ZO-Udp"/>
+                <constraint firstItem="bsw-8K-Zbd" firstAttribute="top" secondItem="baQ-F1-e9z" secondAttribute="top" id="mvM-ed-tCT"/>
+                <constraint firstItem="bsw-8K-Zbd" firstAttribute="leading" secondItem="vZg-Du-dim" secondAttribute="leading" id="q6d-1u-AwQ"/>
+                <constraint firstItem="vZg-Du-dim" firstAttribute="bottom" secondItem="5V6-AQ-w6Z" secondAttribute="bottom" constant="49" id="rwn-xk-DSL"/>
+                <constraint firstAttribute="bottom" secondItem="bsw-8K-Zbd" secondAttribute="bottom" id="tnR-EC-1DQ"/>
+                <constraint firstItem="1k3-RG-QRN" firstAttribute="leading" secondItem="baQ-F1-e9z" secondAttribute="leading" constant="16" id="ycM-AT-3ID"/>
+                <constraint firstAttribute="trailing" secondItem="0Id-oK-nP1" secondAttribute="trailing" constant="16" id="zKy-un-igv"/>
+            </constraints>
+            <point key="canvasLocation" x="135.19999999999999" y="18.440779610194905"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mic.fill" catalog="system" width="110" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="phone.down.fill" catalog="system" width="128" height="55"/>
+        <image name="speaker.1.fill" catalog="system" width="128" height="104"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="label">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

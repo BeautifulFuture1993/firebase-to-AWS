@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--募集中のお誘い-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="InvitationDetailView" id="Y6W-OH-hqX" customClass="InvitationDetailViewController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOn-WU-BdI">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMo-Eb-9be">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="814"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BsC-S5-WAH">
+                                                <rect key="frame" x="20" y="20" width="130" height="130"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="ik2-q4-wWQ"/>
+                                                    <constraint firstAttribute="height" constant="130" id="p8a-jF-6af"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0回" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFM-2a-jcz">
+                                                <rect key="frame" x="370.5" y="293" width="23.5" height="14"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.thumbsup.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nOe-fz-Bwz">
+                                                <rect key="frame" x="20" y="290.5" width="20" height="19"/>
+                                                <color key="tintColor" name="FontColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="NfB-yN-lB1"/>
+                                                    <constraint firstAttribute="height" constant="20" id="ol8-PR-ORz"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="興味ありした人数" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp9-ol-4Gv">
+                                                <rect key="frame" x="50" y="293" width="112" height="14"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="街歩き" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0e-su-E47">
+                                                <rect key="frame" x="352" y="203" width="42" height="14"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="K5u-5b-vTE">
+                                                <rect key="frame" x="20" y="201" width="20" height="17.5"/>
+                                                <color key="tintColor" name="FontColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="dkP-Wx-iy7"/>
+                                                    <constraint firstAttribute="width" constant="20" id="gdk-s4-LL1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvC-5c-NW3">
+                                                <rect key="frame" x="50" y="203" width="56" height="14"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月, 火" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVY-mv-QwV">
+                                                <rect key="frame" x="357" y="263" width="37" height="14"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-Jh-0yH">
+                                                <rect key="frame" x="20" y="261" width="20" height="17.5"/>
+                                                <color key="tintColor" name="FontColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="bMa-2r-Omn"/>
+                                                    <constraint firstAttribute="width" constant="20" id="zQl-3a-hFQ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京都" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uw-wB-neA">
+                                                <rect key="frame" x="352" y="233" width="42" height="14"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.and.ellipse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hMb-70-22Q">
+                                                <rect key="frame" x="20" y="229.5" width="20" height="20.5"/>
+                                                <color key="tintColor" name="FontColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="72N-p2-Y2m"/>
+                                                    <constraint firstAttribute="height" constant="20" id="zsl-uT-5wG"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="場所" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3Q-Vc-R9A">
+                                                <rect key="frame" x="48" y="233" width="28" height="14"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="興味ありした人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygr-bq-ouJ">
+                                                <rect key="frame" x="20" y="340" width="140" height="20"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fgv-Up-iMh">
+                                                <rect key="frame" x="0.0" y="370" width="414" height="444"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoodCell" rowHeight="90" id="6wd-xP-QQC" customClass="GoodCell" customModule="Tauch" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="414" height="90"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6wd-xP-QQC" id="lLV-Cs-1b0">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPL-p0-7pu">
+                                                                    <rect key="frame" x="20" y="21" width="50" height="50"/>
+                                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="50" id="S13-cv-FCJ"/>
+                                                                        <constraint firstAttribute="height" constant="50" id="uN7-ig-pvo"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XK-QB-UWG">
+                                                                    <rect key="frame" x="80" y="25" width="13" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                                    <color key="textColor" name="FontColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3i-4d-n7q">
+                                                                    <rect key="frame" x="80" y="49" width="0.0" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="12"/>
+                                                                    <color key="textColor" name="FontColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rW-fU-v2A">
+                                                                    <rect key="frame" x="354" y="25" width="40" height="40"/>
+                                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="6op-Wr-czg"/>
+                                                                        <constraint firstAttribute="width" constant="40" id="dvo-gf-ULB"/>
+                                                                    </constraints>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" image="hand.thumbsup.fill" catalog="system" title="">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="15"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKy-mO-4Um">
+                                                                    <rect key="frame" x="20" y="21" width="50" height="50"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="50" id="4GB-vz-h6S"/>
+                                                                        <constraint firstAttribute="width" constant="50" id="wcJ-Ag-Abn"/>
+                                                                    </constraints>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GK-od-8yl">
+                                                                    <rect key="frame" x="304" y="25" width="40" height="40"/>
+                                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="40" id="X21-T7-TF5"/>
+                                                                        <constraint firstAttribute="width" constant="40" id="m6D-lD-iV3"/>
+                                                                    </constraints>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" image="hand.thumbsdown.fill" catalog="system" title="">
+                                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="15"/>
+                                                                    </buttonConfiguration>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="HPL-p0-7pu" firstAttribute="top" secondItem="lLV-Cs-1b0" secondAttribute="topMargin" constant="10" id="1BI-d9-jvW"/>
+                                                                <constraint firstItem="lKy-mO-4Um" firstAttribute="leading" secondItem="lLV-Cs-1b0" secondAttribute="leadingMargin" id="C8W-4l-10r"/>
+                                                                <constraint firstItem="lKy-mO-4Um" firstAttribute="top" secondItem="lLV-Cs-1b0" secondAttribute="topMargin" constant="10" id="Coe-3Q-vdZ"/>
+                                                                <constraint firstItem="8XK-QB-UWG" firstAttribute="leading" secondItem="HPL-p0-7pu" secondAttribute="trailing" constant="10" id="DaW-dI-hFO"/>
+                                                                <constraint firstItem="HPL-p0-7pu" firstAttribute="leading" secondItem="lLV-Cs-1b0" secondAttribute="leadingMargin" id="H2m-fj-ZWx"/>
+                                                                <constraint firstItem="8XK-QB-UWG" firstAttribute="top" secondItem="lLV-Cs-1b0" secondAttribute="topMargin" constant="14" id="K8T-vH-gHa"/>
+                                                                <constraint firstItem="9GK-od-8yl" firstAttribute="centerY" secondItem="lLV-Cs-1b0" secondAttribute="centerY" id="NLj-ZB-2Hv"/>
+                                                                <constraint firstItem="4rW-fU-v2A" firstAttribute="leading" secondItem="9GK-od-8yl" secondAttribute="trailing" constant="10" id="PGg-U3-iEw"/>
+                                                                <constraint firstItem="h3i-4d-n7q" firstAttribute="leading" secondItem="HPL-p0-7pu" secondAttribute="trailing" constant="10" id="af6-g6-a31"/>
+                                                                <constraint firstItem="h3i-4d-n7q" firstAttribute="top" secondItem="8XK-QB-UWG" secondAttribute="bottom" constant="10" id="eCF-li-HdC"/>
+                                                                <constraint firstAttribute="trailingMargin" secondItem="4rW-fU-v2A" secondAttribute="trailing" id="pps-SC-nIy"/>
+                                                                <constraint firstItem="4rW-fU-v2A" firstAttribute="centerY" secondItem="lLV-Cs-1b0" secondAttribute="centerY" id="pww-69-UkW"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="badButton" destination="9GK-od-8yl" id="enX-t2-laz"/>
+                                                            <outlet property="goodButton" destination="4rW-fU-v2A" id="7De-fO-pkG"/>
+                                                            <outlet property="iconBtn" destination="lKy-mO-4Um" id="ro1-TG-GjW"/>
+                                                            <outlet property="iconImage" destination="HPL-p0-7pu" id="VEg-6T-O2h"/>
+                                                            <outlet property="nickName" destination="8XK-QB-UWG" id="O2g-pp-LUJ"/>
+                                                            <outlet property="profileDetail" destination="h3i-4d-n7q" id="neq-0Z-gOU"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="riO-qu-Acr"/>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="GDL-b7-XuE"/>
+                                                </connections>
+                                            </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="...." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Suq-7V-vyY">
+                                                <rect key="frame" x="160" y="20" width="244" height="14"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新着" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oi-gu-kBd">
+                                                <rect key="frame" x="366" y="173" width="28" height="14"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CDE-53-CTA">
+                                                <rect key="frame" x="20" y="170.5" width="20" height="19"/>
+                                                <color key="tintColor" name="FontColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="3dT-WQ-EsG"/>
+                                                    <constraint firstAttribute="width" constant="20" id="n9v-MJ-auO"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ステータス" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3k-bI-cQ8">
+                                                <rect key="frame" x="50" y="173" width="70" height="14"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遊びに行ける曜日" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32F-UA-RyW">
+                                                <rect key="frame" x="48" y="263" width="111.5" height="14"/>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                <color key="textColor" name="FontColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="nOe-fz-Bwz" firstAttribute="top" secondItem="r2g-Jh-0yH" secondAttribute="bottom" constant="10" id="1IT-QW-Hdl"/>
+                                            <constraint firstItem="Gp9-ol-4Gv" firstAttribute="centerY" secondItem="nOe-fz-Bwz" secondAttribute="centerY" id="3qJ-FQ-lGr"/>
+                                            <constraint firstItem="F3Q-Vc-R9A" firstAttribute="leading" secondItem="hMb-70-22Q" secondAttribute="trailing" constant="8" id="4XK-c6-WQn"/>
+                                            <constraint firstAttribute="trailing" secondItem="g0e-su-E47" secondAttribute="trailing" constant="20" id="82W-pv-uXp"/>
+                                            <constraint firstItem="XFM-2a-jcz" firstAttribute="centerY" secondItem="Gp9-ol-4Gv" secondAttribute="centerY" id="8x8-ZJ-LpY"/>
+                                            <constraint firstItem="nOe-fz-Bwz" firstAttribute="leading" secondItem="LMo-Eb-9be" secondAttribute="leading" constant="20" id="9ue-n1-dR8"/>
+                                            <constraint firstItem="Ygr-bq-ouJ" firstAttribute="leading" secondItem="LMo-Eb-9be" secondAttribute="leading" constant="20" id="B8R-J4-PEv"/>
+                                            <constraint firstItem="BsC-S5-WAH" firstAttribute="top" secondItem="LMo-Eb-9be" secondAttribute="top" constant="20" id="C4s-rn-SwD"/>
+                                            <constraint firstAttribute="trailing" secondItem="XFM-2a-jcz" secondAttribute="trailing" constant="20" id="EEZ-6G-Ny6"/>
+                                            <constraint firstAttribute="bottom" secondItem="fgv-Up-iMh" secondAttribute="bottom" id="OYG-1x-hbl"/>
+                                            <constraint firstItem="Ygr-bq-ouJ" firstAttribute="top" secondItem="nOe-fz-Bwz" secondAttribute="bottom" constant="30" id="OlR-7Y-3qt"/>
+                                            <constraint firstItem="t3k-bI-cQ8" firstAttribute="centerY" secondItem="CDE-53-CTA" secondAttribute="centerY" id="RhU-95-tUK"/>
+                                            <constraint firstItem="32F-UA-RyW" firstAttribute="centerY" secondItem="r2g-Jh-0yH" secondAttribute="centerY" id="Rp3-vg-wxp"/>
+                                            <constraint firstItem="Suq-7V-vyY" firstAttribute="leading" secondItem="BsC-S5-WAH" secondAttribute="trailing" constant="10" id="SAk-1y-BCj"/>
+                                            <constraint firstItem="r2g-Jh-0yH" firstAttribute="top" secondItem="hMb-70-22Q" secondAttribute="bottom" constant="10" id="T0V-fx-GNF"/>
+                                            <constraint firstItem="t3k-bI-cQ8" firstAttribute="leading" secondItem="CDE-53-CTA" secondAttribute="trailing" constant="10" id="UP1-WU-Fer"/>
+                                            <constraint firstItem="F3Q-Vc-R9A" firstAttribute="centerY" secondItem="hMb-70-22Q" secondAttribute="centerY" id="VXr-nf-ElI"/>
+                                            <constraint firstItem="BsC-S5-WAH" firstAttribute="leading" secondItem="LMo-Eb-9be" secondAttribute="leading" constant="20" id="YLL-CG-R21"/>
+                                            <constraint firstItem="fgv-Up-iMh" firstAttribute="leading" secondItem="LMo-Eb-9be" secondAttribute="leading" id="ZhU-wf-jOa"/>
+                                            <constraint firstAttribute="trailing" secondItem="2uw-wB-neA" secondAttribute="trailing" constant="20" id="c7l-mG-CSu"/>
+                                            <constraint firstItem="2uw-wB-neA" firstAttribute="centerY" secondItem="F3Q-Vc-R9A" secondAttribute="centerY" id="d6P-CM-LZU"/>
+                                            <constraint firstItem="hMb-70-22Q" firstAttribute="top" secondItem="K5u-5b-vTE" secondAttribute="bottom" constant="10" id="fzR-Ig-1Lg"/>
+                                            <constraint firstAttribute="trailing" secondItem="fgv-Up-iMh" secondAttribute="trailing" id="g8O-ol-UP8"/>
+                                            <constraint firstItem="hMb-70-22Q" firstAttribute="leading" secondItem="nOe-fz-Bwz" secondAttribute="leading" id="gcs-z8-ETu"/>
+                                            <constraint firstItem="CDE-53-CTA" firstAttribute="top" secondItem="BsC-S5-WAH" secondAttribute="bottom" constant="20" id="gfU-bX-FXC"/>
+                                            <constraint firstItem="AVY-mv-QwV" firstAttribute="centerY" secondItem="32F-UA-RyW" secondAttribute="centerY" id="ig4-5h-riP"/>
+                                            <constraint firstItem="Suq-7V-vyY" firstAttribute="top" secondItem="LMo-Eb-9be" secondAttribute="top" constant="20" id="iiu-36-6uB"/>
+                                            <constraint firstItem="g0e-su-E47" firstAttribute="centerY" secondItem="CvC-5c-NW3" secondAttribute="centerY" id="jnS-jR-gSR"/>
+                                            <constraint firstItem="32F-UA-RyW" firstAttribute="leading" secondItem="r2g-Jh-0yH" secondAttribute="trailing" constant="8" id="l5w-OD-bBk"/>
+                                            <constraint firstItem="CvC-5c-NW3" firstAttribute="leading" secondItem="K5u-5b-vTE" secondAttribute="trailing" constant="10" id="lqC-BO-d2W"/>
+                                            <constraint firstItem="CvC-5c-NW3" firstAttribute="centerY" secondItem="K5u-5b-vTE" secondAttribute="centerY" id="n6J-7k-Oo9"/>
+                                            <constraint firstItem="CDE-53-CTA" firstAttribute="leading" secondItem="LMo-Eb-9be" secondAttribute="leading" constant="20" id="p8Z-wC-FMW"/>
+                                            <constraint firstItem="Gp9-ol-4Gv" firstAttribute="leading" secondItem="nOe-fz-Bwz" secondAttribute="trailing" constant="10" id="qWS-mb-CDQ"/>
+                                            <constraint firstItem="fgv-Up-iMh" firstAttribute="top" secondItem="Ygr-bq-ouJ" secondAttribute="bottom" constant="10" id="srp-EB-Loo"/>
+                                            <constraint firstItem="K5u-5b-vTE" firstAttribute="leading" secondItem="LMo-Eb-9be" secondAttribute="leading" constant="20" id="tTu-e3-anw"/>
+                                            <constraint firstItem="r2g-Jh-0yH" firstAttribute="leading" secondItem="LMo-Eb-9be" secondAttribute="leading" constant="20" id="uZm-M4-koE"/>
+                                            <constraint firstAttribute="trailing" secondItem="AVY-mv-QwV" secondAttribute="trailing" constant="20" id="uey-ql-dE9"/>
+                                            <constraint firstAttribute="trailing" secondItem="4oi-gu-kBd" secondAttribute="trailing" constant="20" id="uyr-2O-8PP"/>
+                                            <constraint firstItem="4oi-gu-kBd" firstAttribute="centerY" secondItem="t3k-bI-cQ8" secondAttribute="centerY" id="v1o-ai-1aN"/>
+                                            <constraint firstItem="K5u-5b-vTE" firstAttribute="top" secondItem="CDE-53-CTA" secondAttribute="bottom" constant="10" id="vkf-L3-jOr"/>
+                                            <constraint firstAttribute="trailing" secondItem="Suq-7V-vyY" secondAttribute="trailing" constant="10" id="wST-No-4Jl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LMo-Eb-9be" firstAttribute="leading" secondItem="aOn-WU-BdI" secondAttribute="leading" id="9qB-9r-3Pz"/>
+                                    <constraint firstItem="LMo-Eb-9be" firstAttribute="height" secondItem="aOn-WU-BdI" secondAttribute="height" id="ORW-tn-Oxg"/>
+                                    <constraint firstItem="LMo-Eb-9be" firstAttribute="width" secondItem="aOn-WU-BdI" secondAttribute="width" id="RDC-4t-EiK"/>
+                                    <constraint firstItem="LMo-Eb-9be" firstAttribute="top" secondItem="aOn-WU-BdI" secondAttribute="top" id="fV5-MI-lrw"/>
+                                    <constraint firstAttribute="trailing" secondItem="LMo-Eb-9be" secondAttribute="trailing" id="kh9-4U-5qC"/>
+                                    <constraint firstAttribute="bottom" secondItem="LMo-Eb-9be" secondAttribute="bottom" id="zfa-S1-vnG"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aOn-WU-BdI" firstAttribute="height" secondItem="vDu-zF-Fre" secondAttribute="height" id="4F4-bu-Xqm"/>
+                            <constraint firstItem="aOn-WU-BdI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ysm-iM-OkA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aOn-WU-BdI" secondAttribute="trailing" id="ZiF-PR-oWs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="aOn-WU-BdI" secondAttribute="bottom" id="pkS-Nf-uSE"/>
+                            <constraint firstItem="aOn-WU-BdI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="pmE-jX-xZn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="募集中のお誘い" id="JXy-hj-uIS">
+                        <rightBarButtonItems>
+                            <barButtonItem image="trash.fill" catalog="system" id="hQD-Ua-YPB">
+                                <color key="tintColor" name="FontColor"/>
+                                <connections>
+                                    <action selector="deleteAction:" destination="Y6W-OH-hqX" id="tLJ-OW-Pm6"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ellipsis.circle.fill" catalog="system" id="7CG-JB-Usc">
+                                <color key="tintColor" name="FontColor"/>
+                                <connections>
+                                    <action selector="editAction:" destination="Y6W-OH-hqX" id="f4J-W7-nQu"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="area" destination="2uw-wB-neA" id="icg-yd-UjR"/>
+                        <outlet property="category" destination="g0e-su-E47" id="ct1-GO-xH7"/>
+                        <outlet property="day" destination="AVY-mv-QwV" id="bv9-lW-33m"/>
+                        <outlet property="deleteButton" destination="hQD-Ua-YPB" id="Uby-G8-Q4N"/>
+                        <outlet property="editButton" destination="7CG-JB-Usc" id="6jc-Xw-FRf"/>
+                        <outlet property="goodCount" destination="XFM-2a-jcz" id="Zyf-ZH-4Lf"/>
+                        <outlet property="goodTableView" destination="fgv-Up-iMh" id="AXs-OM-vMG"/>
+                        <outlet property="iconImage" destination="BsC-S5-WAH" id="eME-8f-84h"/>
+                        <outlet property="invitationDetail" destination="Suq-7V-vyY" id="UHg-0a-Plm"/>
+                        <outlet property="status" destination="4oi-gu-kBd" id="HrA-8K-uLg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728.98550724637687" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="ellipsis.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="folder.fill" catalog="system" width="128" height="96"/>
+        <image name="hand.thumbsdown.fill" catalog="system" width="128" height="121"/>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
+        <image name="trash.fill" catalog="system" width="119" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FontColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

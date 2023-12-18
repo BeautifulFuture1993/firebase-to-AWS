@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="275-ca-UfI">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QbG-e7-URy">
+                                <rect key="frame" x="157" y="428" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1lY-vO-6sh"/>
+                                    <constraint firstAttribute="width" constant="100" id="f1d-Rn-HqT"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbh-G9-8oY" userLabel="NoUserView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XHa-IG-kkW">
+                                        <rect key="frame" x="107" y="213.66666666666669" width="200" height="198.66666666666669"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="S4a-a9-T0Z"/>
+                                            <constraint firstAttribute="width" secondItem="XHa-IG-kkW" secondAttribute="height" multiplier="1:1" id="tPI-Wa-UBc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3b-jZ-pl6">
+                                        <rect key="frame" x="20" y="422.66666666666669" width="374" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="NqP-UC-dT2"/>
+                                        </constraints>
+                                        <string key="text">表示されるカードがありません
+検索条件を広げてください</string>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="L3b-jZ-pl6" firstAttribute="centerX" secondItem="Tbh-G9-8oY" secondAttribute="centerX" id="0Wv-eJ-0EX"/>
+                                    <constraint firstAttribute="trailing" secondItem="L3b-jZ-pl6" secondAttribute="trailing" constant="20" id="5XK-31-fC1"/>
+                                    <constraint firstItem="L3b-jZ-pl6" firstAttribute="leading" secondItem="Tbh-G9-8oY" secondAttribute="leading" constant="20" id="E9S-Hh-5DH"/>
+                                    <constraint firstItem="XHa-IG-kkW" firstAttribute="centerY" secondItem="Tbh-G9-8oY" secondAttribute="centerY" constant="-50" id="Zgq-l8-lL6"/>
+                                    <constraint firstItem="L3b-jZ-pl6" firstAttribute="top" secondItem="XHa-IG-kkW" secondAttribute="bottom" constant="10" id="nkz-hA-w7h"/>
+                                    <constraint firstItem="XHa-IG-kkW" firstAttribute="centerX" secondItem="Tbh-G9-8oY" secondAttribute="centerX" id="tPe-4a-zsC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tbh-G9-8oY" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="67v-nW-w7s"/>
+                            <constraint firstItem="QbG-e7-URy" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="30" id="8b8-G0-KFd"/>
+                            <constraint firstItem="Tbh-G9-8oY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="C1w-tH-uQ9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Tbh-G9-8oY" secondAttribute="bottom" id="Hkt-l1-w96"/>
+                            <constraint firstItem="QbG-e7-URy" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="rVp-4B-tH7"/>
+                            <constraint firstItem="Tbh-G9-8oY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xdG-QM-ARz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qTs-to-Kx1"/>
+                    <connections>
+                        <outlet property="backgroundLoadingView" destination="QbG-e7-URy" id="2Fp-63-g7g"/>
+                        <outlet property="noUserTitleLabel" destination="L3b-jZ-pl6" id="pwv-vT-EHL"/>
+                        <outlet property="noUserView" destination="Tbh-G9-8oY" id="mOY-Ki-M5p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="43.526785714285715"/>
+        </scene>
+        <!--お相手から-->
+        <scene sceneID="G89-O1-aCP">
+            <objects>
+                <navigationController storyboardIdentifier="HomeScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="275-ca-UfI" customClass="SwipeNavigationController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="お相手から" image="hand.thumbsup" catalog="system" selectedImage="hand.thumbsup.fill" id="HKI-ZT-i6K"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UlL-Z4-gvB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="FontColor"/>
+                        <color key="barTintColor" name="FontColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="FontColor"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" name="FontColor"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="hi8-ga-2Kx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zI9-49-rEO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-790" y="44"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hand.thumbsup" catalog="system" width="123" height="128"/>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FontColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

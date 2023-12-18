@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="th6-bN-cHH">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Screen Manager View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ScreenManagerView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ScreenManagerViewController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wgR-1P-IAS">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="amI-Et-1N8" customClass="ButtonBarView" customModule="Tauch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nWT-ay-cyO"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nw2-dc-SRK">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rks-dy-eUG">
+                                        <rect key="frame" x="0.0" y="40" width="393" height="709"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Rks-dy-eUG" firstAttribute="top" secondItem="amI-Et-1N8" secondAttribute="bottom" id="6ff-Je-3Wr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rks-dy-eUG" secondAttribute="trailing" id="BY2-ZR-aA6"/>
+                                    <constraint firstAttribute="trailing" secondItem="amI-Et-1N8" secondAttribute="trailing" id="Pby-TL-xmm"/>
+                                    <constraint firstItem="Rks-dy-eUG" firstAttribute="top" secondItem="amI-Et-1N8" secondAttribute="bottom" id="Q8b-j9-yJF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rks-dy-eUG" secondAttribute="bottom" id="RTC-3f-jQ7"/>
+                                    <constraint firstItem="amI-Et-1N8" firstAttribute="leading" secondItem="wgR-1P-IAS" secondAttribute="leading" id="dDD-E1-Odz"/>
+                                    <constraint firstItem="Rks-dy-eUG" firstAttribute="leading" secondItem="wgR-1P-IAS" secondAttribute="leading" id="kGF-3q-V2x"/>
+                                    <constraint firstItem="amI-Et-1N8" firstAttribute="top" secondItem="wgR-1P-IAS" secondAttribute="top" id="qCW-Vs-v3w"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uHY-fa-ntM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wgR-1P-IAS" firstAttribute="trailing" secondItem="uHY-fa-ntM" secondAttribute="trailing" id="Ctf-Er-3gT"/>
+                            <constraint firstAttribute="bottom" secondItem="wgR-1P-IAS" secondAttribute="bottom" id="cWv-3Z-V8E"/>
+                            <constraint firstItem="wgR-1P-IAS" firstAttribute="leading" secondItem="uHY-fa-ntM" secondAttribute="leading" id="td9-Zf-r5l"/>
+                            <constraint firstItem="wgR-1P-IAS" firstAttribute="top" secondItem="uHY-fa-ntM" secondAttribute="top" id="wR5-5e-F1g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w40-zM-D3F"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="amI-Et-1N8" id="evZ-b7-HIt"/>
+                        <outlet property="containerView" destination="Rks-dy-eUG" id="hVK-ad-lhZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78.625954198473281" y="-58.450704225352112"/>
+        </scene>
+        <!--さがす-->
+        <scene sceneID="qzM-DS-aGQ">
+            <objects>
+                <navigationController id="th6-bN-cHH" customClass="SwipeNavigationController" customModule="Tauch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="さがす" image="magnifyingglass" catalog="system" id="qWU-1r-MS6"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gTl-BJ-rSd">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="FontColor"/>
+                        <color key="barTintColor" name="FontColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="FontColor"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" name="FontColor"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="FnH-tT-dDC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqf-Zb-nHI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-753" y="-58"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <namedColor name="FontColor">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

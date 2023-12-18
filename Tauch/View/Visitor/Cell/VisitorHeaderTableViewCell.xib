@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5Qk-od-6e2" customClass="VisitorHeaderTableViewCell" customModule="Tauch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="170"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xo-vf-ibF">
+                    <rect key="frame" x="0.0" y="0.0" width="430" height="170"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitor_headerimg" translatesAutoresizingMaskIntoConstraints="NO" id="JVd-y6-lOj">
+                            <rect key="frame" x="0.0" y="27.666666666666671" width="430" height="142.33333333333331"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="JVd-y6-lOj" secondAttribute="height" multiplier="3.024" id="ZEp-FV-ZFy"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z31-LZ-ah2">
+                            <rect key="frame" x="20" y="15.000000000000002" width="390" height="17.666666666666671"/>
+                            <attributedString key="attributedText">
+                                <fragment content="あなたのプロフィールを見てくれたお相手が表示されます！">
+                                    <attributes>
+                                        <color key="NSColor" red="0.88958227629999997" green="0.57075005769999998" blue="0.4454161525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name="HiraMaruProN-W4"/>
+                                        <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="JVd-y6-lOj" firstAttribute="leading" secondItem="1xo-vf-ibF" secondAttribute="leading" id="H0V-DG-Oh9"/>
+                        <constraint firstItem="z31-LZ-ah2" firstAttribute="leading" secondItem="1xo-vf-ibF" secondAttribute="leading" constant="20" id="L3U-va-2Tz"/>
+                        <constraint firstItem="JVd-y6-lOj" firstAttribute="top" secondItem="z31-LZ-ah2" secondAttribute="bottom" constant="-5" id="YWE-KD-5df"/>
+                        <constraint firstAttribute="trailing" secondItem="JVd-y6-lOj" secondAttribute="trailing" id="Znv-1U-ZRp"/>
+                        <constraint firstAttribute="bottom" secondItem="JVd-y6-lOj" secondAttribute="bottom" id="bXb-DQ-X6E"/>
+                        <constraint firstItem="z31-LZ-ah2" firstAttribute="top" secondItem="1xo-vf-ibF" secondAttribute="top" constant="15" id="cTN-er-gCY"/>
+                        <constraint firstAttribute="trailing" secondItem="z31-LZ-ah2" secondAttribute="trailing" constant="20" id="zfI-ru-afq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1xo-vf-ibF" secondAttribute="bottom" id="5Lc-f6-BCQ"/>
+                <constraint firstItem="1xo-vf-ibF" firstAttribute="leading" secondItem="5Qk-od-6e2" secondAttribute="leading" id="OcD-6x-OMN"/>
+                <constraint firstItem="1xo-vf-ibF" firstAttribute="top" secondItem="5Qk-od-6e2" secondAttribute="top" id="R8t-Iu-8kx"/>
+                <constraint firstAttribute="trailing" secondItem="1xo-vf-ibF" secondAttribute="trailing" id="yYV-AH-T94"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="customContentView" destination="1xo-vf-ibF" id="e2w-lr-fwv"/>
+                <outlet property="headerImg" destination="JVd-y6-lOj" id="qzJ-Dj-EdZ"/>
+                <outlet property="headerTitle" destination="z31-LZ-ah2" id="i2T-Ve-mOl"/>
+            </connections>
+            <point key="canvasLocation" x="410.68702290076334" y="189.43661971830986"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="visitor_headerimg" width="1228" height="406"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
